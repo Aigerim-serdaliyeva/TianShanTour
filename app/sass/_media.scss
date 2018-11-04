@@ -1,0 +1,267 @@
+
+@import "vars";
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	.main-menu {
+    ul {
+      li {
+        margin-right: 25px;
+        &.last {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+  .hamburger {
+    display: block;
+  }    
+
+  .header {
+    padding: 5px 0;
+
+    .logo {
+      position: static;
+      transform: none;
+      img {
+        height: 100px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    &__top {
+      display: none;
+    }
+  }
+
+  .footer {
+    text-align: center;
+
+    &__content {
+      flex-direction: column;
+
+      & > * {
+          margin: 0 0 20px 0 !important;            
+      }
+    }
+  }
+
+	.main-menu {
+    display: none;
+    background-color: $accent;
+    position: fixed;
+    top: 110px;
+    left: 0;
+    right: 0;
+    text-align: left;
+    margin-left: 0;
+    z-index: 98;
+    padding: 10px 0;
+
+		ul {
+			display: block;
+			height: auto;
+      padding: 0;
+      margin: 0;
+
+			li {
+        margin: 0 0 5px;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+      
+      .zvonok, .seperator {
+        display: none;
+      }
+		}
+  }    
+
+
+  .s-strana {
+    &__title {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    &__content {
+      display: none;
+    }
+    .carousel-strana {
+      display: block;
+    }
+  }
+  .s {
+    
+  }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {  
+  
+
+  .form {
+    &--horizontal {
+      .form {
+        &__content {
+          flex-direction: column;
+          max-width: 500px;
+        } 
+        
+        &__info {
+          max-width: 500px;
+        }
+      }
+
+      .input-div {
+        margin-right: 0;
+      }  
+    }
+
+    .input-div, .button {
+      width: 100%;
+    }
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+
+  .header {
+    .grow {
+      display: block;
+    }
+  }
+
+  .section {
+    &-title {
+      font-size: 24px;
+    }      
+  }
+
+  .s-travel {
+    background-image: none;
+    background-color: $accent;
+    padding-top: 40px;
+
+    .travel {
+      margin-bottom: 30px;
+      &__title {
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+    }
+
+    ul {
+      li {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  .s-reviews {
+    &__content {
+      padding: 20px 20px 0;
+    }
+
+    .review {
+      display: block;
+      margin-bottom: 30px;
+      &__img {
+        margin: 0 auto 15px;
+        width: 120px;
+        height: 120px;
+      }
+      &__name {
+        text-align: center;
+        font-size: 20px;
+      }
+      &__hotel {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      &__text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+  .break {
+    display: inline;
+  }
+
+  .call-me {
+    display: flex;
+  }
+
+  .section-title {
+    &--accent {
+      padding: 50px 30px 20px;
+    }
+  }
+
+  .s-cooperate {
+    
+    .carousel-cooperate {
+      padding: 0 45px;
+    }
+  }
+
+  .s {
+    &-thanks {
+      padding: 150px 0 50px;
+      
+      &-title {
+        font-size: 30px;
+      }
+
+      &-text {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+  
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+  .main-menu {
+		.container {
+			width: auto;
+			padding: 0;
+		}
+  }
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}

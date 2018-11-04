@@ -1,0 +1,6 @@
+@import "_mixins/font-face";
+
+@include font-face("MontDemo", "../fonts/MontDemo/Heavy/MontDemo-Heavy", 700);
+@include font-face("Circe", "../fonts/Circe/Regular/Circe-Regular", normal);
+@include font-face("Circe", "../fonts/Circe/Bold/Circe-Bold", Bold);
+@include font-face("Circe", "../fonts/Circe/ExtraBold/Circe-ExtraBold", 800);
