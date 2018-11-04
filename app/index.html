@@ -52,19 +52,19 @@
             <div class="container">
               <ul>
                 <li class="link">
-                  <a href="#main">Горящие туры</a>
+                  <a href="#tur">Горящие туры</a>
                 </li>
                 <li class="link">
-                  <a href="#">Выгоды и гарантии</a>
+                  <a href="#travel">Выгоды и гарантии</a>
                 </li>
                 <li class="link">
-                  <a href="#">Отели ОАЭ</a>
+                  <a href="#hotel">Отели ОАЭ</a>
                 </li>
                 <li class="seperator">
                     <a href="#"></a>
                   </li>
                 <li class="link">
-                  <a href="#">Другие страны</a>
+                  <a href="#strana">Другие страны</a>
                 </li>
                 <li class="link last">
                   <a href="#contact">Контакты</a>
@@ -108,7 +108,7 @@
       </div>
     </section>
 
-    <section class="section s-tur">
+    <section class="section s-tur" id="tur">
       <div class="container">
         <h2 class="section-title">Успейте поймать горящий тур в ОАЭ по самой выгодной цене!</h2>
         <div class="row s-tur__content">
@@ -153,7 +153,7 @@
       </div>
     </section>
 
-    <section class="section s-travel inverse">
+    <section class="section s-travel inverse" id="travel">
       <div class="container">
         <h2 class="section-title">Путешествовать с "Tian Shan Tour" выгодно и безопасно</h2>
         <div class="row">
@@ -187,7 +187,7 @@
       </div>
     </section>
 
-    <section class="section s-hotel">
+    <section class="section s-hotel" id="hotel">
       <div class="container">
         <h2 class="section-title">Отдых в лучших отелях Эмиратов</h2>
         <div class="row justify-content-center">
@@ -203,14 +203,14 @@
                 <h4 class="hotel__name">Sadaf Hotel 3*</h4>
                 <div class="hotel__price">от 89 835 тг.</div>
                 <div class="hotel__button">
-                  <button class="button button--border">Посмотреть</button>
+                  <button class="button button--border" data-remodal-target="hotel">Посмотреть</button>
                   <button class="button">Рассчитать стоимость</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-7 d-flex">
-            <div class="hotel hotel--x">
+            <div class="hotel hotel--x hotel--y">
               <div class="hotel__image">
                 <div class="hotel__img"><img src="./img/holiday.jpg" alt=""></div>
                 <div class="hotel__title">Дубай</div>
@@ -231,7 +231,7 @@
           <div class="col-lg-7 d-flex">
             <div class="row justify-content-center">
               <div class="col-lg-12">
-                <div class="hotel hotel--x">
+                <div class="hotel hotel--x hotel--min">
                   <div class="hotel__image">
                     <div class="hotel__img"><img src="./img/madinat.jpg" alt=""></div>
                     <div class="hotel__title">Джумейра (район в г. Дубай)</div>
@@ -249,7 +249,7 @@
               </div>
   
               <div class="col-lg-12">
-                <div class="hotel hotel--x">
+                <div class="hotel hotel--x hotel--min">
                   <div class="hotel__image">
                     <div class="hotel__img"><img src="./img/Habtoor.jpg" alt=""></div>
                     <div class="hotel__title">Джумейра (район в г. Дубай)</div>
@@ -291,7 +291,7 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-7 d-flex">
-            <div class="hotel hotel--x">
+            <div class="hotel hotel--x hotel--y">
               <div class="hotel__image">
                 <div class="hotel__img"><img src="./img/saadiyat.jpg" alt=""></div>
                 <div class="hotel__title">Другие Эмираты</div>
@@ -504,7 +504,7 @@
       </div>
     </section>
 
-    <section class="section s-strana">
+    <section class="section s-strana" id="strana">
       <div class="container">
         <h2 class="section-title inverse">Только присматриваетесь?</h2>
         <h3 class="s-strana__title inverse">Туристическое агентство "Tian Shan Tour" предоставляет большое разнообразие туров по всему миру</h3>
@@ -657,7 +657,7 @@
       </div>
     </section>
 
-    <section class="section s-contact">
+    <section class="s-contact" id="contact">
       <div class="map">
           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa7dbddf9923e1c6d39fd92a09e067f460c5d67fffa3f92ed9f3243303d92e88d&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
@@ -842,7 +842,69 @@
       </div>
   
     </form>    
-  </div>  
+  </div> 
+  
+  <div class="remodal dubai" data-remodal-id="hotel" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close remodal-close--white"></button>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="dubai__image">
+          <a class="dubai__image__block__big" href="./img/large-sadaf-1.jpg" data-fancybox>
+            <img src="./img/large-sadaf-1.jpg" alt="">
+          </a>
+          <div class="dubai__image__block">
+            <div class="dubai__image__block__img active" data-id="1">
+              <img src="./img/sadaf-1.jpg" alt="">
+            </div>
+            <div class="dubai__image__block__img active" data-id="1">
+              <img src="./img/sadaf-2.jpg" alt="">
+            </div>
+            <div class="dubai__image__block__img active" data-id="1">
+              <img src="./img/sadaf-3.jpg" alt="">
+            </div>
+            <div class="dubai__image__block__img active" data-id="1">
+              <img src="./img/sadaf-4.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="dubai__block">
+          <div class="dubai__name">Sadaf Hotel 3* (Дубай)</div>
+          <div class="dubai__price">Цена на одного человека: <span>от 89 835 тг. </span></div>
+          <div class="dubai__vxodit"><span>Входит:</span> перелет, проживание, питание BB*, трансфер</div>
+          <div class="dubai__text">
+            <span>Вылет из г. Алматы в 3 ночи</span> <br>
+            Приятный небольшой отель, который находится в коммерческом и торговом районе Дейра, недалеко от станции метро и торговых центров City Centre, Al Ghurair Centre, в 4 км от международного аэропорта г. Дубай.
+          </div>
+          <div class="dubai__info">* Система BB - тип питания, включающий завтрак в отеле</div>
+
+          <div class="form form--vertical">
+            <form action="/mail.php" method="post">
+              <div class="form__title">Оставьте заявку на бесплатную консультацию</div>
+              <div class="form__content">
+                <input type="hidden" name="info" value="Оставьте заявку на бесплатную консультацию">
+  
+                <div class="input-div">
+                  <input type="text" class="input" name="name" placeholder="Ваше имя">
+                </div>
+  
+                <div class="input-div">
+                  <input type="tel" class="input" name="phone" placeholder="Номер телефона*" required minlength="10">
+                  <span class="error-message">Заполните это поле</span>
+                </div>
+                
+                <button class="button ajax-submit" type="submit" id="zakazat_konsultasiu">Заказать консультацию</button>
+  
+              </div>
+              <div class="form__info">*Ваши данные в безопасности и не будут переданы третьим лицам</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
 
   <script src="./js/libs.min.js"></script>
   <script src="./js/main.min.js"></script>

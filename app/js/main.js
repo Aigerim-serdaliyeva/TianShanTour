@@ -223,6 +223,17 @@ $(document).on('closing', '.question-modal', function (e) {
 });
 
 
+// $(".dubai__image__block__img").click( function() {
+//   var $this = $(this);
+//   var $block = $this.closest(".dubai__image");
+//   $block.find(".dubai__image__block__img").removeClass("active");
+//   $this.addClass("active");
+//   var id = $this.data("id");
+//   $block.find(".dubai__image__block__big").attr("href", "/img/large-dubai-" + id + ".jpg");
+//   $block.find(".dubai__image__block__big img").attr("src", "/img/big-dubai-" + id + ".jpg");
+// });
+
+
   $(".carousel-review").owlCarousel({
     loop: false,
     dots: true,
