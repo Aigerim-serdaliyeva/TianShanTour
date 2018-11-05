@@ -227,6 +227,37 @@
       }
     }
   }
+
+  .dubai {
+    padding: 25px 10px 10px;
+
+    &__image {
+      margin-bottom: 25px;
+      margin-top: 0;
+      margin-left: -10px;
+
+      &__block {
+        &__big {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+
+    .form {
+      &__title {
+        text-align: center;
+      }
+      &__content {
+        width: 100%;
+        max-width: none;
+      }
+    }
+
+    &__bottom {
+      margin: 20px -10px -10px;
+    }
+  }
 }
 
 // ≥576px
