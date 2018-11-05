@@ -10,11 +10,11 @@
 }
 
 .header {
-  // position: fixed;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 98;
-  background-color: rgba($green, .1);
+  background-color: rgba($green, 0.1);
 
   &--scrolled {
     background-color: rgba($accent, 1); 
@@ -156,7 +156,7 @@
   &-title {
     font-size: 30px;
     font-weight: 900;
-    font-family: MontDemo, serif;
+    font-family: $title_family;
     margin: 0 auto 40px;
     text-align: center;
 
@@ -200,7 +200,7 @@
 
   &__title {
     font-size: 40px;
-    font-family: MontDemo, serif;
+    font-family: $title_family;
     color: #fff;
     margin: 0 0 350px 0;
     text-align: left;
@@ -208,17 +208,13 @@
   }
 
   .quiz {
+    max-width: 1005px;
+    margin: 0 auto;
     padding: 28px;
     background-color: rgba($accent, .8);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 0;
-
-    &__content {
-      max-width: 1005px;
-      margin: 0 auto;
-    }
 
     &__title {
       font-size: 20px;
@@ -241,20 +237,19 @@
 
 .s-tur {
   background-image: url("../img/tur-back.png");
-  background-position: -190px 110px;
-  background-size: contain;
+  background-position: 150px 110px;
+  background-size: auto;
+  padding-bottom: 150px;
 
   .section-title {
     margin-bottom: 150px;
-  }
-
-  &__content {
-    margin-bottom: 130px;
   }
 }
 
 .s-travel {
   background-image: url("../img/travel-back.png");
+  background-size: auto;
+  background-position: top center;
   padding-top: 150px;
 
   .travel {
@@ -319,15 +314,20 @@
 .s-hotel {
 
   .hotel {
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 6px 14px 0px rgba(33, 33, 33, 0.48);
     margin-bottom: 45px;
 
     &--x {
-      display: flex;
+      flex-direction: row;
       .hotel {
         &__title {
           transform: none;
         }        
+        &__block {
+          padding: 10px 20px;
+        }
         &__button {
           flex-direction: column;
           align-items: center;
@@ -338,21 +338,13 @@
       }
     }
 
-    &--y {
+    &--big {
       .hotel {
         &__name {
-          margin: 75px auto 35px;
+          margin: 0 auto 35px;
         }
         &__price {
           margin-bottom: 50px;
-        }
-      }
-    }
-
-    &--min {
-      .hotel {
-        &__block {
-          padding: 10px 20px;
         }
       }
     }
@@ -376,7 +368,11 @@
     }
 
     &__block {
-      padding: 30px 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px 20px 10px;
     }
 
     &__name, &__price {
@@ -405,6 +401,12 @@
 .s-reviews {
   background-image: url("../img/review-back.jpg");
 
+  .carousel-review {
+    .owl-item {
+      align-items: flex-start;
+    }
+  }
+
   &__content {
     background-color: rgba($accent, .8);
     padding: 40px 40px 0;
@@ -413,7 +415,6 @@
   .review {
     display: flex;
     margin-bottom: 50px;
-    // max-width: 560px;
 
     &__img {
       margin-right: 20px;
@@ -611,8 +612,8 @@
     
   &__title {
     font-size: 40px;
-    font-family: MontDemo, serif;
-    font-weight: normal;
+    font-family: $title_family;
+    font-weight: 900;
     margin-bottom: 30px;
   }
 
@@ -634,8 +635,8 @@
   max-width: 750px;
   &__title {
     font-size: 20px;
-    font-family: MontDemo, serif;
-    font-weight: 700;
+    font-family: $title_family;
+    font-weight: 900;
     text-align: center;
     margin-bottom: 25px;
   }
@@ -668,10 +669,10 @@
 
   &__name {
     font-size: 18px;
-    font-family: MontDemo, serif;
+    font-family: $title_family;
     margin-bottom: 15px;
     margin-top: 20px;
-    font-weight: 700;
+    font-weight: 900;
   }
 
   &__price {
