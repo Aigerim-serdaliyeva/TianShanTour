@@ -156,7 +156,7 @@
   &-title {
     font-size: 30px;
     font-weight: 900;
-    font-family: MontDemo, serif;
+    font-family: $title_family;
     margin: 0 auto 40px;
     text-align: center;
 
@@ -200,7 +200,7 @@
 
   &__title {
     font-size: 40px;
-    font-family: MontDemo, serif;
+    font-family: $title_family;
     color: #fff;
     margin: 0 0 350px 0;
     text-align: left;
@@ -604,8 +604,8 @@
     
   &__title {
     font-size: 40px;
-    font-family: MontDemo, serif;
-    font-weight: normal;
+    font-family: $title_family;
+    font-weight: 900;
     margin-bottom: 30px;
   }
 
@@ -627,8 +627,8 @@
   max-width: 750px;
   &__title {
     font-size: 20px;
-    font-family: MontDemo, serif;
-    font-weight: 700;
+    font-family: $title_family;
+    font-weight: 900;
     text-align: center;
     margin-bottom: 25px;
   }
@@ -661,10 +661,10 @@
 
   &__name {
     font-size: 18px;
-    font-family: MontDemo, serif;
+    font-family: $title_family;
     margin-bottom: 15px;
     margin-top: 20px;
-    font-weight: 700;
+    font-weight: 900;
   }
 
   &__price {
