@@ -271,7 +271,9 @@ $(".dubai__image__block__img").click( function() {
     responsive: {
       0: { items: 1, mouseDrag: false, },
       576: { items: 2, mouseDrag: true, },
-      767: { items: 3, mouseDrag: true, },
+      768: { items: 3 },
+      992: { items: 4 },
+      1200: { items: 5, mouseDrag: false },
     },
   });
 
