@@ -237,15 +237,12 @@
 
 .s-tur {
   background-image: url("../img/tur-back.png");
-  background-position: -190px 110px;
-  background-size: contain;
+  background-position: 150px 110px;
+  background-size: auto;
+  padding-bottom: 150px;
 
   .section-title {
     margin-bottom: 150px;
-  }
-
-  &__content {
-    margin-bottom: 130px;
   }
 }
 
