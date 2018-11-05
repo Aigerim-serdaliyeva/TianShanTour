@@ -401,6 +401,12 @@
 .s-reviews {
   background-image: url("../img/review-back.jpg");
 
+  .carousel-review {
+    .owl-item {
+      align-items: flex-start;
+    }
+  }
+
   &__content {
     background-color: rgba($accent, .8);
     padding: 40px 40px 0;
@@ -409,7 +415,6 @@
   .review {
     display: flex;
     margin-bottom: 50px;
-    // max-width: 560px;
 
     &__img {
       margin-right: 20px;
