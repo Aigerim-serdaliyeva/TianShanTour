@@ -401,15 +401,29 @@
 .s-reviews {
   background-image: url("../img/review-back.jpg");
 
-  .carousel-review {
-    .owl-item {
-      align-items: flex-start;
-    }
-  }
 
   &__content {
     background-color: rgba($accent, .8);
-    padding: 40px 40px 0;
+    padding: 40px 0 0;
+  }
+
+  .carousel-review {
+    padding: 0 40px;
+    .owl {
+      &-item {
+        align-items: flex-start;
+      }
+      &-dots {
+        padding: 15px 0;
+        margin: 0 -40px;
+        background-color: rgba($green, .8);
+      } 
+      &-dot {
+        &.active {
+          background-color: #fff !important;
+        }
+      }
+    }
   }
 
   .review {
@@ -426,10 +440,6 @@
       }
     }
 
-    &__block {
-      // max-width: 335px;
-    }
-
     &__name {
       font-size: 24px;
       font-weight: 800;
@@ -443,26 +453,6 @@
 
     &__text {
       font-size: 18px;
-      // max-width: 330px;
-      // width: 100%;
-    }
-  }
-
-  &__green {
-    background-color: rgba($green, .8);
-    height: 50px;
-  }
-
-  .owl-carousel {
-    .owl {
-      &-dots {
-        margin-bottom: -38px;
-      } 
-      &-dot {
-        &.active {
-          background-color: #fff !important;
-        }
-      }
     }
   }
 }
