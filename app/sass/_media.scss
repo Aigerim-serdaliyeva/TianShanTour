@@ -121,8 +121,22 @@
       display: block;
     }
   }
-  .s {
-    
+  .s-contact {
+    .contact {
+      position: relative;
+      background-color: $green;
+      &__content {
+        display: block;
+      }
+
+      &__phone, &__address {
+        margin-bottom: 20px;
+      }
+      &__email {
+        margin-bottom: 20px;
+        display: block;
+      }
+    }
   }
 }
 
