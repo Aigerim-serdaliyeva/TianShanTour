@@ -15,6 +15,12 @@
       }
     }
   }
+
+  .s-strana {
+    .carousel-strana {
+      padding: 0 50px;
+    }  
+  }
 }
 
 // ≥992px
@@ -113,12 +119,6 @@
     &__title {
       font-size: 20px;
       margin-bottom: 30px;
-    }
-    &__content {
-      display: none;
-    }
-    .carousel-strana {
-      display: block;
     }
   }
   .s {
