@@ -10,11 +10,11 @@
 }
 
 .header {
-  // position: fixed;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 98;
-  background-color: rgba($green, .1);
+  background-color: rgba($green, 0.1);
 
   &--scrolled {
     background-color: rgba($accent, 1); 
@@ -208,17 +208,13 @@
   }
 
   .quiz {
+    max-width: 1005px;
+    margin: 0 auto;
     padding: 28px;
     background-color: rgba($accent, .8);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 0;
-
-    &__content {
-      max-width: 1005px;
-      margin: 0 auto;
-    }
 
     &__title {
       font-size: 20px;
