@@ -658,6 +658,7 @@
 
   &__image {
     margin-top: -35px;
+    margin-left: -20px;
     &__block {
       display: flex;
       justify-content: space-between;
@@ -667,9 +668,20 @@
         position: relative;
 
         &.active {
-          .dubai__back {
+          &::after {
             display: block;
           }
+        }
+
+        &:after {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: rgba($green, .4);
         }
       }
 
@@ -678,15 +690,6 @@
     }
   }
 
-  &__back {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba($green, .4);
-  }
 
   &__name {
     font-size: 18px;
@@ -712,6 +715,7 @@
   }
 
   &__text {
+    margin-bottom: 10px;
     span {
       font-weight: bold;
     }
