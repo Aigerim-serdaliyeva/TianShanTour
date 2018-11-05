@@ -314,15 +314,20 @@
 .s-hotel {
 
   .hotel {
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 6px 14px 0px rgba(33, 33, 33, 0.48);
     margin-bottom: 45px;
 
     &--x {
-      display: flex;
+      flex-direction: row;
       .hotel {
         &__title {
           transform: none;
         }        
+        &__block {
+          padding: 10px 20px;
+        }
         &__button {
           flex-direction: column;
           align-items: center;
@@ -333,21 +338,13 @@
       }
     }
 
-    &--y {
+    &--big {
       .hotel {
         &__name {
-          margin: 75px auto 35px;
+          margin: 0 auto 35px;
         }
         &__price {
           margin-bottom: 50px;
-        }
-      }
-    }
-
-    &--min {
-      .hotel {
-        &__block {
-          padding: 10px 20px;
         }
       }
     }
@@ -371,7 +368,11 @@
     }
 
     &__block {
-      padding: 30px 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px 20px 10px;
     }
 
     &__name, &__price {
