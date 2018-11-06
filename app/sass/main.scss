@@ -699,9 +699,10 @@
 }
 
 .s-thanks {
-  padding: 50px 0 100px 0;
+  padding: 200px 0 100px 0;
   flex-grow: 1;
   background-image: url("../img/thanks-back.jpg");
+  background-position: bottom center;
     
   &__title {
     font-size: 40px;
@@ -713,7 +714,7 @@
   &__text {
     font-size: 36px;
     font-weight: bold;
-    margin: 0 0 125px;
+    margin: 0 0 85px;
   }
 
   &__link {
@@ -869,7 +870,31 @@
   }
 }
 
+.calculate {
+  max-width: 750px;
+
+  &__title {
+    font-family: $title_family;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .question__content {
+    margin: 0 0 30px;
+  }
+}
+
 .qlabel {  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
   &__title {
     margin-bottom: 15px;
   }
@@ -878,7 +903,7 @@
     outline: 0;
     font-size: 14px;
     padding: 5px 5px 5px 15px;
-    margin: 0 0 0 10px;
+    margin: 0 30px 0 10px;
     box-shadow: 0px 6px 14px 0px rgba(33, 33, 33, 0.2);
     &:first-child {
       margin-right: 30px;
@@ -946,7 +971,19 @@
   &__content {
     flex-grow: 1;
     display: flex;
-    margin: 0 0 20px 50px;
+    justify-content: space-between;
+    margin: 0 50px 20px 50px;
+
+    &--2 {
+      justify-content: flex-start;
+      .qlabel:first-child {
+        margin-right: 50px;
+      }
+    }
+
+    &--4 {
+      margin: 0 20px;
+    }
   }
 
   .cdropdown {
@@ -965,6 +1002,12 @@
       margin-left: 10px;
       background-image: url('../img/arrow-right-black.png');
       background-size: cover;
+    }
+    &:hover {
+      color: #fff;
+      &:after {
+        background-image: url("../img/arrow-right-white.png") !important;
+      }
     }
   }
   

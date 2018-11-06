@@ -183,6 +183,7 @@
         
         &__info {
           max-width: 500px;
+          text-align: center;
         }
       }
 
@@ -464,6 +465,7 @@
   }
 
   .remodal {
+    padding: 30px 10px 10px;
     &__title {
       font-size: 18px;
     }
@@ -474,6 +476,58 @@
           max-width: none;
         }
       }
+    }
+  }
+
+  .question {
+    
+    &__content {
+      display: block;
+      margin: 0 0px;
+
+      &--4 {
+        .qlabel__content {
+          display: block;
+        }
+        .qlabel__price {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &__header {
+      margin-bottom: 20px;
+    }
+
+    .qlabel {
+      margin-bottom: 20px;
+    }
+  }
+
+  .calculate {
+    
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    .qlabel {
+      margin-bottom: 20px;
+    }
+  }
+
+  .qlabel {
+    &__date {
+      margin: 0 10px 10px;
+      padding: 5px;
+      font-size: 12px;
+    }
+    &__title {
+      margin-bottom: 5px;
     }
   }
 }
