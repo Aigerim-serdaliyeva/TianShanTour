@@ -5,6 +5,12 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
+  .footer {
+    &__comand {
+      margin: 0 auto;
+    }
+  }
+
 	.main-menu {
     ul {
       li {
