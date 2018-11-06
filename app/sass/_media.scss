@@ -322,7 +322,7 @@
   }
 
   .dubai {
-    padding: 25px 10px 10px;
+    padding: 30px 10px 10px;
 
     &__image {
       margin: 0 -10px 25px;
@@ -347,6 +347,12 @@
 
     &__bottom {
       margin: 20px -10px -10px;
+    }
+
+    &__price {
+      span {
+        font-size: 14px;
+      }
     }
   }
 }
