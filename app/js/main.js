@@ -310,13 +310,23 @@ $(".dubai__image__block__img").click( function() {
 
 
   $(".carousel-certificates").owlCarousel({
-    loop: true,
+    loop: false,
+    smartSpeed: 500,
+    margin: 30,
+    items: 1,
+    navText: ['', '']
+  });
+
+  $(".carousel-certificates-mobile").owlCarousel({
+    loop: false,
     smartSpeed: 500,
     margin: 30,
     navText: ['', ''],
     responsive: {
-      0: { items: 1, mouseDrag: false, dots: true, nav: false },
-      480: { items: 2, mouseDrag: true, dots: false, nav: true },
+      0: { mouseDrag: false, items: 1, mouseDrag: false },
+      576: { mouseDrag: true, items: 2, mouseDrag: true },
+      768: { mouseDrag: true, items: 3 },
+      992: { mouseDrag: true, items: 4 },
     },
   });
 
