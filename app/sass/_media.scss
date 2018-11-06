@@ -132,11 +132,6 @@
   }
 
   .s-contact {
-    .map {
-      & > ymaps {
-        height: 300px !important;
-      }
-    }
     .contact {
       position: relative;
       background-color: $green;
@@ -327,7 +322,7 @@
   }
 
   .dubai {
-    padding: 30px 10px 10px;
+    padding: 30  px 10px 10px;
 
     &__image {
       margin: 0 -10px 25px;
