@@ -168,47 +168,6 @@ $(".perehod").click(function(e) {
   var $show = $questionModal.find("#" + $this.data("show"));
   var $hide = $questionModal.find("#" + $this.data("hide"));
 
-  var $question = $this.closest(".question");
-  var variantSelected = false;
-  var drugoeSelected = false;
-
-  var $variants = $question.find('.checkbox [type=radio], .checkbox [type=checkbox]');
-  $variants.each(function() {
-    var $input = $(this);
-    if ($input.prop('checked')) {
-      // Если выбран другое, то пользователь обьязан указать свой вариант
-      if ($input.hasClass("drugoe")) {
-        drugoeSelected = true;
-        var vawVariant = $input.closest(".checkbox").siblings(".ukazat").val();
-        if (vawVariant && vawVariant.length > 0) {
-          variantSelected = true;
-        }
-      } else {
-        variantSelected = true;
-      }
-    }
-  });  
-
-  var errorText = "";
-
-  if ($variants.length > 0 && !variantSelected) {
-    errorText = drugoeSelected ? "Укажите ваш вариант" : "Выберите один из вариантов";
-  }
-
-  var $requireds = $question.find("input[required], textarea[required]");
-  $requireds.each(function() {
-    var val = $(this).val();
-    if (!val) {
-      errorText = "Заполните все поля";
-    }
-  });
-
-  if (errorText) {
-    $question.addClass("has-error");
-    $question.find(".question__error").html(errorText);
-    return;
-  }
-
   $show.removeClass("d-none");
   $hide.addClass("d-none");
 });
@@ -232,6 +191,47 @@ $(".dubai__image__block__img").click( function() {
   $block.find(".dubai__image__block__big").attr("href", imgSrc);
   $block.find(".dubai__image__block__big img").attr("src", imgSrc);
 });
+
+$(".cdropdown").click(function() {
+	var $this = $(this);
+  $this.addClass("clicked");
+	setTimeout(function() {
+    $this.removeClass("clicked");
+  }, 100);
+});
+
+$(".cdropdown__toggle").click(function() {
+	$(this).closest(".cdropdown").toggleClass("opened");
+});
+
+$(".cdropdown__item").click(function() {
+	var $this = $(this);
+	var $dropdown = $this.closest(".cdropdown");
+  $dropdown.removeClass("opened");
+  $dropdown.find(".cdropdown__value").val($this.data("value")); 	 	
+  $dropdown.find(".cdropdown__text").html($this.html());
+});
+
+$("html").click(function() {
+	$(".cdropdown:not(.clicked)")
+    .removeClass("opened");
+});
+
+$(".qlabel--dop input").change(function() {
+  var val = $(this).val();
+  var $dop = $(this).closest('.qlabel').find('.qlabel__dop');
+  if (val > 0) {
+    var item = '<div class="qlabel__item">Возраст ребенка 1* <input type="number" name="Возраст_ребенка[]" value="1" min="0"></div>';
+    var items = "";
+    for (var i = 0; i < val; i++) {
+      items += item;
+    }
+    $dop.html(items);
+    $dop.addClass('show');
+  } else {
+    $dop.removeClass('show');
+  }
+})
 
 
   $(".carousel-review").owlCarousel({

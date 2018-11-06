@@ -867,53 +867,129 @@
       <input type="hidden" name="info" value="Quiz">
   
       <div class="question" id="question-1">
-        <div class="question__num">Вопрос 1/2</div>
-        <div class="question__text">Для какой цели Вам нужен ролик?</div>
-        <input type="hidden" name="Вопрос1" value="Для какой цели Вам нужен ролик?">
-        <div class="question__variants">
-          <label class="label">
-            <span class="checkbox">
-              <input type="radio" name="Ответ1" value="Для бизнеса">
-              <span></span>           
-            </span>
-            <span>Для бизнеса</span>
-          </label>
-          <label class="label">
-            <span class="checkbox">
-              <input type="radio" name="Ответ1" value="Для личного использования">
-              <span></span>
-            </span>
-            <span>Для личного использования</span>
-          </label>
-          <label class="label">
-            <span class="checkbox">
-              <input type="radio" name="Ответ1" value="Другое" class="drugoe">
-              <span></span>
-            </span>
-            <span>Другое</span>
-            <input type="text" name="Ответ1_текст" placeholder="указать*" class="ukazat">
-          </label>
+        <div class="question__header">
+          <div class="question__num"><span class="green">1</span>/4</div>
+          <div class="question__text">Регион поездки*</div>    
         </div>
-        <div class="question__error"></div>
+        <div class="question__content">
+          <div class="qlabel">
+            <div class="qlabel__title">Город вылета:</div>
+            <div class="cdropdown">
+              <div class="cdropdown__toggle">
+                <input type="hidden" name="Город_вылета" value="Алматы" class="cdropdown__value"/>
+                <span class="cdropdown__text">Алматы</span>
+              </div>
+              <div class="cdropdown__items">
+                <div class="cdropdown__item" data-value="Алматы">Алматы</div>
+                <div class="cdropdown__item" data-value="Астана">Астана</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="qlabel">
+            <div class="qlabel__title">Интересующий город ОАЭ:</div>
+            <div class="cdropdown cdropdown--large">
+              <div class="cdropdown__toggle">
+                <input type="hidden" name="Город_ОАЭ" value="Дубай" class="cdropdown__value"/>
+                <span class="cdropdown__text">Дубай</span>
+              </div>
+              <div class="cdropdown__items">
+                <div class="cdropdown__item" data-value="Дубай">Дубай</div>
+                <div class="cdropdown__item" data-value="Джумейра (район в г. Дубай)">Джумейра (район в г. Дубай)</div>
+                <div class="cdropdown__item" data-value="Другие Эмираты">Другие Эмираты</div>
+              </div>
+            </div>
+          </div>
+        </div>        
         <a href="#" class="perehod" data-show="question-2" data-hide="question-1">Следующий вопрос</a>
       </div>
-  
+
       <div class="question d-none" id="question-2">
-        <div class="question__num">Вопрос 2/2</div>
-        <div class="question__text">Заполните поля</div>
-        <input type="hidden" name="Вопрос2" value="Заполните поля">
-        <label class="label">
-          <span>Количество сотрудников</span>
-          <input type="number" name="Количество_сотрудников" value="" required>
-        </label>      
-        <label class="label">
-          <span>Комментария</span>
-          <input type="text" name="Комментария" value="" required>
-        </label>      
-        <div class="question__error"></div>
-        <a href="#" class="perehod" data-show="question-last" data-hide="question-2">Завершить тест</a>
-      </div>      
-  
+        <div class="question__header">
+          <div class="question__num"><span class="green">2</span>/4</div>
+          <div class="question__text">Дата и продолжительность*</div>    
+        </div>
+        <div class="question__content">
+          <div class="qlabel">
+            <div class="qlabel__title">Примерная дата путешествия:</div>
+            <div class="qlabel__content">
+              с <input type="date" name="дата_c" class="qlabel__date">              
+              по <input type="date" name="дата_по" class="qlabel__date">              
+            </div>
+          </div>          
+        </div>        
+        <a href="#" class="perehod" data-show="question-3" data-hide="question-2">Следующий вопрос</a>
+      </div>
+
+      <div class="question d-none" id="question-3">
+        <div class="question__header">
+          <div class="question__num"><span class="green">3</span>/4</div>
+          <div class="question__text">Количество человек*</div>    
+        </div>
+        <div class="question__content">
+          <div class="qlabel">
+            <div class="qlabel__title">Взрослые*:</div>
+            <input type="number" name="Взрослые" class="qlabel__number" value="1" min="1">
+          </div>          
+          <div class="qlabel qlabel--dop">
+            <div class="qlabel__block">
+              <div class="qlabel__title">Дети:</div>
+              <input type="number" name="Дети" class="qlabel__number" value="0" min="0">    
+            </div>
+            <div class="qlabel__dop"></div>
+          </div>          
+        </div>        
+        <a href="#" class="perehod" data-show="question-4" data-hide="question-3">Следующий вопрос</a>
+      </div>
+
+      <div class="question d-none" id="question-4">
+        <div class="question__header">
+          <div class="question__num"><span class="green">4</span>/4</div>
+          <div class="question__text">Бюджет*</div>    
+        </div>
+        <div class="question__content">
+          <label class="label">
+            <span class="checkbox checkbox--green">
+              <input type="radio" name="бюджет" value="Желаемый бюджет на 1 человека:">
+              <span></span>
+            </span>
+            <span>Желаемый бюджет на 1 человека:</span>
+          </label>
+          <label class="label">
+            <span class="checkbox checkbox--green">
+              <input type="radio" name="бюджет" value="Желаемый бюджет на всю компанию:">
+              <span></span>
+            </span>
+            <span>Желаемый бюджет на всю компанию:</span>
+          </label>
+          <div class="qlabel__content">
+            от: <input type="number" name="от" class="qlabel__number qlabel__number--large" value="100000" min="0">
+            <div class="cdropdown cdropdown--mini">
+              <div class="cdropdown__toggle">
+                <input type="hidden" name="валюта_от" value="KZT" class="cdropdown__value"/>
+                <span class="cdropdown__text">KZT</span>
+              </div>
+              <div class="cdropdown__items">
+                <div class="cdropdown__item" data-value="KZT">KZT</div>
+                <div class="cdropdown__item" data-value="USD">USD</div>
+              </div>
+            </div>
+            до: <input type="number" name="до" class="qlabel__number qlabel__number--large" value="500000" min="0">
+            <div class="cdropdown cdropdown--mini">
+              <div class="cdropdown__toggle">
+                <input type="hidden" name="валюта_до" value="KZT" class="cdropdown__value"/>
+                <span class="cdropdown__text">KZT</span>
+              </div>
+              <div class="cdropdown__items">
+                <div class="cdropdown__item" data-value="KZT">KZT</div>
+                <div class="cdropdown__item" data-value="USD">USD</div>
+              </div>
+            </div>
+          </div>
+        </div>        
+        <a href="#" class="perehod" data-show="question-last" data-hide="question-4">Завершить</a>
+      </div>
+    
       <div class="question d-none" id="question-last">
       <div class="question__text">Введите контактные данные</div>
         <div class="form form--vertical">

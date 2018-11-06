@@ -540,6 +540,15 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
     }
   }
+
+  &--green {
+    border-color: $green;
+    [type="checkbox"], [type="radio"] {  
+      & + span {
+        background-color: $green;
+      }
+    }
+  }
 }
 /* End Custom checkbox */
 
@@ -559,3 +568,80 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.cdropdown {
+  width: 170px;
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 6px 14px 0px rgba(33, 33, 33, 0.2);
+  &--large {
+    width: 220px;
+  }
+  &--mini {
+    width: 80px;
+  }
+  
+  &__toggle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px 10px 5px 15px;
+    cursor: pointer;
+    
+    &:after {
+      content: "";
+      display: inline-block;
+      margin-left: 10px;
+      width: 13px;
+      height: 7px;
+      background-image: url('../img/down-arrow.png');
+      background-size: cover;
+    }
+  }
+  
+  &__text {
+    // max-width: 120px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  &__items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 6px 14px 0px rgba(33, 33, 33, 0.2);
+  }
+  
+  &__item {
+    display: block;
+    width: 100%;
+    padding: 5px 15px;
+    white-space: nowrap;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 0;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  &.opened {
+    .cdropdown {
+      &__toggle {
+        background-color: $green;
+      }
+      &__items {
+        display: block;
+      }
+    }
+  }
+}

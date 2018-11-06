@@ -1,5 +1,8 @@
 @import './base';
 
+.green {
+  color: $green;
+}
 
 .page-wrapper {
   overflow: hidden;
@@ -866,5 +869,117 @@
   }
 }
 
+.qlabel {  
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__date {
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    padding: 5px 5px 5px 15px;
+    margin: 0 0 0 10px;
+    box-shadow: 0px 6px 14px 0px rgba(33, 33, 33, 0.2);
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+  &__number {
+    border: 0;
+    outline: 0;
+    width: 70px;
+    font-size: 14px;
+    padding: 5px 5px 5px 15px;
+    box-shadow: 0px 6px 14px 0px rgba(33, 33, 33, 0.2);
+    &--large {
+      width: 120px;
+    }
+  }
+  &--dop {
+    display: flex;
+  }
+  &__dop {
+    display: none;
+    margin: 35px 0 0 30px;
+
+    input {
+      width: 50px;
+      padding: 3px 0 3px 5px;
+      border: 1px solid #000;
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+  &__item {
+    white-space: nowrap;
+    margin-bottom: 5px;
+  }
+}
+
+.question-modal {
+  max-width: 610px;
+  background-image: url('../img/quiz-back.jpg');
+  background-size: cover;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  min-height: 280px;
+
+  &__header {
+    display: flex;
+    margin-bottom: 30px;
+  } 
+  &__num {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+  } 
+  &__text {
+    font-family: $title_family;
+    font-size: 18px;
+  }
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    margin: 0 0 20px 50px;
+  }
+
+  .cdropdown {
+    font-size: 14px;
+  }  
+
+  .perehod {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    &:after {
+      display: block;
+      content: "";
+      width: 25px;
+      height: 17px;
+      margin-left: 10px;
+      background-image: url('../img/arrow-right-black.png');
+      background-size: cover;
+    }
+  }
+  
+  &#question-4 {
+    .question {
+      &__content {
+        display: block;
+      }
+    }
+
+    .label {
+      display: block;
+      font-size: 16px;
+    }
+  }
+}
 
 @import './_media';
