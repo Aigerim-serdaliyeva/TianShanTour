@@ -325,9 +325,7 @@
     padding: 25px 10px 10px;
 
     &__image {
-      margin-bottom: 25px;
-      margin-top: 0;
-      margin-left: -10px;
+      margin: 0 -10px 25px;
 
       &__block {
         &__big {
@@ -440,6 +438,20 @@
       &-text {
         font-size: 16px;
         margin-bottom: 40px;
+      }
+    }
+  }
+
+  .remodal {
+    &__title {
+      font-size: 18px;
+    }
+    &--small {
+      padding: 30px 10px;
+      .form {
+        &__content {
+          max-width: none;
+        }
       }
     }
   }
