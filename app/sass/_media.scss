@@ -132,6 +132,11 @@
   }
 
   .s-contact {
+    .map {
+      & > ymaps {
+        height: 300px !important;
+      }
+    }
     .contact {
       position: relative;
       background-color: $green;
