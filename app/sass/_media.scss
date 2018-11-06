@@ -27,6 +27,15 @@
       padding: 0 50px;
     }  
   }
+
+  .s-hotel {
+    .row {
+      display: none;
+    }
+    .carousel-hotels {
+      display: block;
+    }
+  }
 }
 
 // ≥992px
@@ -110,7 +119,7 @@
     .carousel-tur {
       margin-bottom: 20px;
     }
-  }
+  }  
 
   .s-travel {
     ul {
