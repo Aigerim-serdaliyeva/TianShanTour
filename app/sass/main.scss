@@ -568,10 +568,21 @@
     .owl {
       &-dots {
         position: absolute;
+        bottom: 20px;
+        right: 20px;
         padding: 15px 0;
         margin: 0;
         background-color: rgba($green, .8);
         min-width: 262px;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 100%;
+          bottom: 0;
+          right: -1000px;
+          background-color: rgba($green, .8);
+        }
       } 
       &-dot {
         &.active {
