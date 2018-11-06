@@ -120,7 +120,17 @@
       font-size: 20px;
       margin-bottom: 30px;
     }
+
+    .form {
+      &__block {
+        display: block;
+      }
+      &__quiz {
+        margin-bottom: 20px;
+      }
+    }
   }
+
   .s-contact {
     .contact {
       position: relative;
@@ -145,6 +155,10 @@
   
 
   .form {
+
+    &__title {
+      font-size: 18px;
+    }
     &--horizontal {
       .form {
         &__content {
@@ -164,6 +178,7 @@
 
     .input-div, .button {
       width: 100%;
+      flex-basis: 0;
     }
   }
 
@@ -204,6 +219,59 @@
       }
     }
   }
+
+  .s-hotel {
+
+    .hotel {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 100%;
+
+      &__title {
+        transform: none;
+      }
+
+      &__image {
+        .hotel__img {
+          text-align: center;
+        }
+      }
+
+      &__block {
+        padding: 15px 10px;
+      }
+
+      &--x {
+        flex-direction: column;
+
+        .hotel__title {
+          // transform: translateY(50%);
+        }
+
+        .hotel__button {
+          flex-direction: row;
+          .button:first-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &--big {
+        .hotel {
+          &__price {
+            margin-bottom: 20px;
+          }
+          &__name {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      &__title {
+        font-size: 18px;
+      }
+    }
+  }
   
   .s-reviews {
     &__content {
@@ -239,6 +307,17 @@
       &__text {
         font-size: 16px;
       }
+    }
+  }
+
+  .s-strana {
+    .form {
+      padding: 10px;
+
+      &__title {
+        font-size: 20px;
+      }
+
     }
   }
 
@@ -307,6 +386,31 @@
     }
   }
 
+  .s-hotel {
+    .hotel {
+      &__button {
+        flex-direction: column;
+        .button:first-child {
+          margin-bottom: 10px;
+        }
+      }
+
+      &--x {
+        .hotel {
+          &__button {
+            flex-direction: column;
+            .button {
+              width: 100%;
+            }
+            .button:first-child {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .s-reviews {
     background-image: none;
   }
@@ -315,6 +419,13 @@
     
     .carousel-cooperate {
       padding: 0 45px;
+    }
+  }
+
+  .s-strana {
+    .form {
+      margin: 0 -10px;
+      
     }
   }
 
