@@ -80,7 +80,8 @@
 
 	.main-menu {
     display: none;
-    background-color: $accent;
+    background-color: #fff;
+    border-bottom: 1px solid $green;
     position: fixed;
     top: 110px;
     left: 0;
@@ -102,6 +103,10 @@
         &:last-child {
           margin: 0;
         }
+      }
+
+      a {
+        color: #000;
       }
       
       .zvonok, .seperator {
@@ -337,6 +342,14 @@
     }
   }
 
+  .s-contact {
+    .map {
+      & > ymaps {
+        height: 300px !important;
+      }
+    }
+  }
+
   .dubai {
     padding: 30  px 10px 10px;
 
@@ -377,6 +390,11 @@
 @include media-breakpoint-down(xs) {
   .break {
     display: inline;
+  }
+
+  #jivo-iframe-container {
+    display: none !important;
+    // visibility: hidden !;
   }
 
   // .call-me {
