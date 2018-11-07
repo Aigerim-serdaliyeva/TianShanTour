@@ -379,8 +379,12 @@
     display: inline;
   }
 
-  .call-me {
-    display: flex;
+  // .call-me {
+  //   display: flex;
+  // }
+
+  .callback__wrapper {
+    display: block !important; 
   }
 
   .section-title {
