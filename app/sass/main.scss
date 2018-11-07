@@ -25,6 +25,9 @@
     border-bottom: 1px solid $green;
     a {
       color: #000;
+      &:hover {
+        color: #000;
+      }
     }
     .logo-white {
       display: none;
@@ -261,6 +264,14 @@
 
   .section-title {
     margin-bottom: 150px;
+  }
+
+  .carousel-tur {
+    .owl {
+      &-item {
+        align-items: stretch;
+      }
+    }
   }
 }
 

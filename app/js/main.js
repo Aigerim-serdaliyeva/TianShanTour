@@ -233,6 +233,35 @@ $(".qlabel--dop input").change(function() {
   }
 })
 
+$('input[name="Способ"]').change(function() {
+  var $form = $(this).closest('.form');
+  var $div = $form.find('.change');
+  $div.find('input').remove();
+  if (this.value !== 'E-mail') {
+    $div.prepend('<input type="tel" class="input input--accent" name="phone" placeholder="Контактный телефон*" required minlength="10">');
+  } else {
+    $div.prepend('<input type="email" class="input input--accent" name="email" placeholder="E-mail*" required>');
+  }
+});
+
+var $instagram = $('.carousel-tur');
+  $.get('/instagram.php', function(data) {
+    $instagram.html(data);
+    $instagram.owlCarousel({
+      loop: false,
+      nav: false,
+      dots: true,
+      mouseDrag: false,
+      smartSpeed: 500,
+      margin: 15,
+      navText: ['', ''],
+      responsive: {
+        0: { items: 1, mouseDrag: false },
+        576: { items: 1, mouseDrag: true },
+        768: { items: 2 },
+      }
+    }); 
+  });
 
   $(".carousel-review").owlCarousel({
     loop: false,
@@ -243,24 +272,10 @@ $(".qlabel--dop input").change(function() {
     navText: ['', ''],
     responsive: {
       0: { items: 1, mouseDrag: false, },
-      480: { items: 1, mouseDrag: true, },
+      576: { items: 1, mouseDrag: true, },
     },
   });
   
-  $(".carousel-tur").owlCarousel({
-    loop: true,
-    dots: true,
-    nav: false,
-    smartSpeed: 500,
-    margin: 30,
-    navText: ['', ''],
-    responsive: {
-      0: { items: 1, mouseDrag: false, },
-      480: { items: 1, mouseDrag: true, },
-      767: { items: 2, mouseDrag: true, },
-    },
-  });
-
   $(".carousel-hotels").owlCarousel({
     loop: false,
     dots: true,
@@ -302,9 +317,9 @@ $(".qlabel--dop input").change(function() {
     navText: ['', ''],
     responsive: {
       0: { items: 1, mouseDrag: false, },
-      480: { items: 2, mouseDrag: true, },
-      767: { items: 3, mouseDrag: true, },
-      991: { items: 4, mouseDrag: true, },
+      576: { items: 2, mouseDrag: true, },
+      768: { items: 3, mouseDrag: true, },
+      992: { items: 4, mouseDrag: true, },
     },
   });
 
