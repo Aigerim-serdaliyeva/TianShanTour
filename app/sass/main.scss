@@ -20,7 +20,18 @@
   background-color: rgba($green, 0.1);
 
   &--scrolled {
-    background-color: rgba($accent, 1); 
+    background-color: rgba(#fff, 1); 
+    color: #000;
+    border-bottom: 1px solid $green;
+    a {
+      color: #000;
+    }
+    .logo-white {
+      display: none;
+    }
+    .logo-black {
+      display: block !important;
+    }
   }
 
   &__content {
@@ -33,6 +44,10 @@
     left: 50%;
     transform: translateX(-50%);
     top: 7px;
+
+    &-black {
+      display: none;
+    }
   }
 
   &__top {
@@ -490,6 +505,18 @@
   }
 }
 
+.s-form {
+  .form {
+    &__title {
+      font-weight: normal;
+      letter-spacing: -1px;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
 .s-cooperate {
 
   .section-title {
@@ -642,6 +669,7 @@
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 1;
 
     &__content {
       display: flex;
