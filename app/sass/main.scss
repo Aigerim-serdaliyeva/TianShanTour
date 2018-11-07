@@ -550,18 +550,14 @@
     &__quiz {
       max-width: 310px;
       width: 100%;
-    }
-  }
-
-  .question {
-    &__text {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    &__variants {
-      display: flex;
-      justify-content: space-between;
+      &__text {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }  
+      &__variants {
+        display: flex;
+        justify-content: space-between;
+      }  
     }
   }
 }
