@@ -123,7 +123,6 @@ $(document).ready(function () {
 
     var $model = $('[data-remodal-id="' + target + '"]');
     var info = json["info"];
-    console.log(info);
 
     for (var i = 0; i < info.length; i++) {
       var prop = info[i]["prop"];
@@ -183,6 +182,24 @@ $(".perehod").click(function(e) {
 
   var $show = $questionModal.find("#" + $this.data("show"));
   var $hide = $questionModal.find("#" + $this.data("hide"));
+
+  var $question = $this.closest(".question");
+
+  var $requireds = $question.find(':required');
+  var formValid = true;
+
+  // проверяем объязательные (required) поля этой формы
+  $requireds.each(function () {
+    $elem = $(this);
+
+    // если поле пусто, то ему добавляем класс error
+    if (!$elem.val() || !checkInput($elem)) {
+      $elem.addClass('error');
+      formValid = false;
+    }
+  });
+
+  if (!formValid) { return; }
 
   $show.removeClass("d-none");
   $hide.addClass("d-none");

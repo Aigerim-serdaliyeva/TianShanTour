@@ -322,17 +322,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 	&::-webkit-input-placeholder {
-    color: #a0a0a0;
+    color: #000;
 		opacity: 1;
 	}
 	
 	&::-moz-placeholder {
-    color: #a0a0a0;
+    color: #000;
 		opacity: 1;
 	}
 	
 	&:-ms-input-placeholder {
-    color: #a0a0a0;
+    color: #000;
 		opacity: 1;
   }
   
@@ -596,7 +596,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 220px;
   }
   &--mini {
-    width: 80px;
+    width: 90px;
   }
   
   &__toggle {

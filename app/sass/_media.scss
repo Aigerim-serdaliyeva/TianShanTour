@@ -546,10 +546,11 @@
   }
 
   .qlabel {
-    &__date {
-      margin: 0 10px 10px;
-      padding: 5px;
-      font-size: 12px;
+    &__item {
+      margin: 0 0 10px;
+    }
+    &__content {
+      display: block;
     }
     &__title {
       margin-bottom: 5px;

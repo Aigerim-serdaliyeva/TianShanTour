@@ -1017,8 +1017,20 @@
           <div class="qlabel">
             <div class="qlabel__title">Примерная дата путешествия:</div>
             <div class="qlabel__content">
-              <div class="glabel__title">с</div> <input type="date" name="дата_c" class="qlabel__date">              
-              по <input type="date" name="дата_по" class="qlabel__date">              
+              <div class="qlabel__item">
+                <span>с</span> 
+                <div class="input-div">
+                  <input type="date" name="дата_c" class="qlabel__date" required>
+                  <span class="error-message">Заполните поле</span>
+                </div>              
+              </div>
+              <div class="qlabel__item">
+                <span>по</span>
+                <div class="input-div">
+                  <input type="date" name="дата_по" class="qlabel__date" required>
+                  <span class="error-message">Заполните поле</span>
+                </div>     
+              </div>
             </div>
           </div>          
         </div>        
@@ -1054,7 +1066,7 @@
         <div class="question__content question__content--4">
           <label class="label">
             <span class="checkbox checkbox--green">
-              <input type="radio" name="бюджет" value="Желаемый бюджет на 1 человека:">
+              <input type="radio" name="бюджет" value="Желаемый бюджет на 1 человека:" checked>
               <span></span>
             </span>
             <span>Желаемый бюджет на 1 человека:</span>
@@ -1067,8 +1079,9 @@
             <span>Желаемый бюджет на всю компанию:</span>
           </label>
           <div class="qlabel__content">
-            <div class="qlabel__price">
-              от: <input type="number" name="от" class="qlabel__number qlabel__number--large" value="100000" min="0">
+            <div class="qlabel__item">
+              <span>от:</span> 
+              <input type="number" name="от" class="qlabel__number qlabel__number--large mr-10" value="100000" min="0">
               <div class="cdropdown cdropdown--mini">
                 <div class="cdropdown__toggle">
                   <input type="hidden" name="валюта_от" value="KZT" class="cdropdown__value"/>
@@ -1080,18 +1093,19 @@
                 </div>
               </div>
             </div>
-            <div class="qlabel__price">
-                до: <input type="number" name="до" class="qlabel__number qlabel__number--large" value="500000" min="0">
-                <div class="cdropdown cdropdown--mini">
-                  <div class="cdropdown__toggle">
-                    <input type="hidden" name="валюта_до" value="KZT" class="cdropdown__value"/>
-                    <span class="cdropdown__text">KZT</span>
-                  </div>
-                  <div class="cdropdown__items">
-                    <div class="cdropdown__item" data-value="KZT">KZT</div>
-                    <div class="cdropdown__item" data-value="USD">USD</div>
-                  </div>
+            <div class="qlabel__item">
+              <span>до:</span> 
+              <input type="number" name="до" class="qlabel__number qlabel__number--large mr-10" value="500000" min="0">
+              <div class="cdropdown cdropdown--mini">
+                <div class="cdropdown__toggle">
+                  <input type="hidden" name="валюта_до" value="KZT" class="cdropdown__value"/>
+                  <span class="cdropdown__text">KZT</span>
                 </div>
+                <div class="cdropdown__items">
+                  <div class="cdropdown__item" data-value="KZT">KZT</div>
+                  <div class="cdropdown__item" data-value="USD">USD</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>        
@@ -1103,7 +1117,7 @@
         <div class="form form--vertical">
           <div class="form__content">
             <div class="input-div">
-              <input type="text" class="input" name="name" placeholder="Ваше имя" required>
+              <input type="text" class="input" name="name" placeholder="Ваше имя">
               <span class="error-message">Заполните поле</span>
             </div>
             <div class="input-div">

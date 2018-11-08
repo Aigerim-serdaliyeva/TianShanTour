@@ -939,7 +939,6 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     span {
       margin: 5px 10px 0 0;
     }
@@ -984,11 +983,18 @@
     }
   }
   &__item {
-    white-space: nowrap;
-    margin-bottom: 5px;
+    display: flex;
+    &:first-child {
+      margin-right: 30px;
+    }
+    // white-space: nowrap;
+    // margin-bottom: 5px;
   }
   .input-div {
     display: inline-block;
+  }
+  &__price {
+    // width: calc(50% - 10px);
   }
 }
 
