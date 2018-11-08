@@ -628,35 +628,35 @@
             <div class="strana__img"><img src="./img/strana-1.jpg" alt=""></div>
             <div class="strana__block">
               <div class="strana__title">Европа</div>
-              <button class="button" data-remodal-target="zvonok-modal-strana">Подробнее</button>
+              <button class="button" data-remodal-target="zvonok-modal-strana" data-remodal-info='{"info":[{"prop":"Страна","value":""}]}'>Подробнее</button>
             </div>
           </div>
           <div class="strana">
             <div class="strana__img"><img src="./img/strana-2.jpg" alt=""></div>
             <div class="strana__block">
               <div class="strana__title">Турция</div>
-              <button class="button" data-remodal-target="zvonok-modal-strana">Подробнее</button>
+              <button class="button" data-remodal-target="zvonok-modal-strana" data-remodal-info='{"info":[{"prop":"Страна","value":"Турция"}]}'>Подробнее</button>
             </div>
           </div>
           <div class="strana">
             <div class="strana__img"><img src="./img/strana-3.jpg" alt=""></div>
             <div class="strana__block">
               <div class="strana__title">Египет</div>
-              <button class="button" data-remodal-target="zvonok-modal-strana">Подробнее</button>
+              <button class="button" data-remodal-target="zvonok-modal-strana" data-remodal-info='{"info":[{"prop":"Страна","value":"Египет"}]}'>Подробнее</button>
             </div>
           </div>
           <div class="strana">
             <div class="strana__img"><img src="./img/strana-4.jpg" alt=""></div>
             <div class="strana__block">
               <div class="strana__title">Тайланд</div>
-              <button class="button" data-remodal-target="zvonok-modal-strana">Подробнее</button>
+              <button class="button" data-remodal-target="zvonok-modal-strana" data-remodal-info='{"info":[{"prop":"Страна","value":"Тайланд"}]}'>Подробнее</button>
             </div>
           </div>
           <div class="strana">
             <div class="strana__img"><img src="./img/strana-5.jpg" alt=""></div>
             <div class="strana__block">
               <div class="strana__title">Другие страны мира</div>
-              <button class="button" data-remodal-target="zvonok-modal-strana">Подробнее</button>
+              <button class="button" data-remodal-target="zvonok-modal-strana" data-remodal-info='{"info":[{"prop":"Страна","value":"Другие страны мира"}]}'>Подробнее</button>
             </div>
           </div>
         </div>
@@ -842,7 +842,8 @@
     <div class="form form--vertical">
       <form action="/mail.php" method="post">
         <div class="form__content">
-          <input type="hidden" name="info" value="Обратный звонок">
+          <input type="hidden" name="info" value="Оставьте заявку и получите информацию об актуальных турах в интересующую страну">
+          <input type="hidden" name="Страна" value="">
 
           <div class="input-div">
             <input type="text" class="input" name="name" placeholder="Ваше имя">
