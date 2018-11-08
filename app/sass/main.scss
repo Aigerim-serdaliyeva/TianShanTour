@@ -926,10 +926,23 @@
   }
 }
 
+.mr {
+  &-10 {
+    margin-right: 10px;
+  }
+  &-30 {
+    margin-right: 30px;
+  }
+}
+
 .qlabel {  
   &__content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    span {
+      margin: 5px 10px 0 0;
+    }
   }
   &__title {
     margin-bottom: 15px;
@@ -939,11 +952,8 @@
     outline: 0;
     font-size: 14px;
     padding: 5px 5px 5px 15px;
-    margin: 0 30px 0 10px;
+    // margin: 0 30px 0 10px;
     box-shadow: 0px 6px 14px 0px rgba(33, 33, 33, 0.2);
-    &:first-child {
-      margin-right: 30px;
-    }
   }
   &__number {
     border: 0;
@@ -976,6 +986,9 @@
   &__item {
     white-space: nowrap;
     margin-bottom: 5px;
+  }
+  .input-div {
+    display: inline-block;
   }
 }
 

@@ -93,7 +93,7 @@ $(document).ready(function () {
 
 
   // при изменении объязателных полей проверяем можно ли удалять класс error
-  $("input:required, textarea:required").keyup(function () {
+  $("input:required, textarea:required").change(function () {
     var $this = $(this);
     if ($this.attr('type') != 'tel') {
       checkInput($this);
@@ -117,9 +117,25 @@ $(document).ready(function () {
     }
   }
 
+  $("[data-remodal-info]").click(function() {
+    var target = $(this).data('remodal-target');
+    var json = $(this).data('remodal-info');
+
+    var $model = $('[data-remodal-id="' + target + '"]');
+    var info = json["info"];
+    console.log(info);
+
+    for (var i = 0; i < info.length; i++) {
+      var prop = info[i]["prop"];
+      var val = info[i]["value"];
+      $model.find('[name="' + prop + '"]').val(val);
+    }
+
+  })
+
   // при закрытии модального окна удаляем error клас формы в модальном окне
   $(document).on('closing', '.remodal', function (e) {
-    $(this).find(".input, .textarea").removeClass("error");
+    $(this).find(".input-div input, .input-div textarea").removeClass("error");
     var form = $(this).find("form");
     if (form.length > 0) {
       form[0].reset();

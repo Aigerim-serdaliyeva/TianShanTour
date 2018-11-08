@@ -253,9 +253,39 @@ h1, h2, h3, h4, h5, h6 {
 .input-div {
   position: relative;
   
-  .input, .textarea {
-    width: 100%;  
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+    &.error {
+      border-color: red;
+      color: red;
+  
+      &+.error-message {
+        display: block;
+      }
+
+      &::-webkit-input-placeholder {
+        color: red !important;
+      }
+      &::-moz-placeholder {
+        color: red !important;
+      }      
+      &:-ms-input-placeholder {
+        color: red !important;
+      }
+    }    
   }
+
+  .error-message {
+    display: none;
+    text-align: left;
+    color: red;
+    padding-left: 15px;
+    margin-top: 5px;
+    font-size: 14px;
+	}
 }
 
 .input, .textarea {
@@ -287,22 +317,9 @@ h1, h2, h3, h4, h5, h6 {
     
   }
 
-  &.error {
-    border-color: red;
-    color: red;
-
-    &+.error-message {
-      display: block;
-    }
-  }
-
-	&+.error-message {
-    display: none;
-    text-align: left;
-    color: red;
+  & + .error-message {
     padding-left: 20px;
-    margin-top: 5px;
-	}
+  }
 
 	&::-webkit-input-placeholder {
     color: #a0a0a0;
@@ -335,17 +352,7 @@ h1, h2, h3, h4, h5, h6 {
     } 
   }
 	
-	&.error::-webkit-input-placeholder {
-		color: red;
-	}
 	
-	&.error::-moz-placeholder {
-		color: red;
-	}
-	
-	&.error:-ms-input-placeholder {
-		color: red;
-	}
 }
 
 .textarea {
