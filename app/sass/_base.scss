@@ -158,42 +158,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-// .call-me {
-//   position: fixed;
-// 	bottom: 20px;
-// 	left: 20px;
-// 	z-index: 99;
-// 	cursor: pointer;
-//   @include circle(50px);
-//   background-color: #58ea00;
-//   cursor: pointer;
-//   display: none;
-
-//   .fa {
-//     color: #fff;
-//     font-size: 25px;
-//     position: relative;
-//     top: 1px;
-//   }
-
-//   &:before,
-//   &:after {
-//     content: '';
-//     position: absolute;
-//     top: -15px;
-//     left: -15px;
-//     right: -15px;
-//     bottom: -15px;
-//     border: 1px solid #58ea00;
-//     border-radius: 50%;
-//     animation: pulse 1.5s linear infinite;
-//   }
-
-//   &:after {
-//     animation-delay: 0.5s;
-//   }
-// }
-
 .callback {
   &__wrapper {
     position: fixed;
@@ -252,20 +216,6 @@ h1, h2, h3, h4, h5, h6 {
 
   &__phone {
     background: url("../svg/phone-icon.svg") no-repeat center;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1);
   }
 }
 
