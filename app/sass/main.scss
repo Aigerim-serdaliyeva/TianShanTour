@@ -258,9 +258,10 @@
 
 .s-tur {
   background-image: url("../img/tur-back.png");
-  background-position: 150px 110px;
+  background-position: 175px 110px;
   background-size: auto;
   padding-bottom: 150px;
+  min-height: 790px;
 
   .section-title {
     margin-bottom: 150px;
@@ -1061,3 +1062,4 @@
 }
 
 @import './_media';
+@import './animation_block-1';

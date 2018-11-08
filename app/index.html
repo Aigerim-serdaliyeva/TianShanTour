@@ -120,75 +120,80 @@
       </div>
     </section>
 
-    <section class="section s-tur" id="tur">
-      <div class="container">
-        <h2 class="section-title">Успейте поймать горящий тур в ОАЭ по самой выгодной цене!</h2>
-        <div class="row s-tur__content">
-          <div class="col-lg-7">
-            <div class="owl-carousel carousel-tur">
+    <div class="animation1">
+      <!-- <canvas id="sand"></canvas> -->
+      <!-- <div class="canvas"></div> -->
+      <section class="section s-tur" id="tur">
+        <div class="container">
+          <h2 class="section-title">Успейте поймать горящий тур в ОАЭ по самой выгодной цене!</h2>
+          <div class="row s-tur__content">
+            <div class="col-lg-7">
+              <div class="owl-carousel carousel-tur">
+              </div>
             </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="form form--vertical wow slideInLeft">
-              <form action="/mail.php" method="post">
-                <div class="form__title">Оставьте заявку и уточните все детали
-                  горящего тура у нашего консультанта</div>
-                <div class="form__content">
-                  <input type="hidden" name="info" value="Оставьте заявку и уточните все детали горящего тура у нашего консультанта">
-    
-                  <div class="input-div">
-                    <input type="text" class="input" name="name" placeholder="Ваше имя">
+            <div class="col-lg-5">
+              <div class="form form--vertical wow slideInLeft">
+                <form action="/mail.php" method="post">
+                  <div class="form__title">Оставьте заявку и уточните все детали
+                    горящего тура у нашего консультанта</div>
+                  <div class="form__content">
+                    <input type="hidden" name="info" value="Оставьте заявку и уточните все детали горящего тура у нашего консультанта">
+      
+                    <div class="input-div">
+                      <input type="text" class="input" name="name" placeholder="Ваше имя">
+                    </div>
+      
+                    <div class="input-div">
+                      <input type="tel" class="input" name="phone" placeholder="Контактный телефон*" required minlength="10">
+                      <span class="error-message">Заполните это поле</span>
+                    </div>
+      
+                    <button class="button ajax-submit" type="submit" id="ostavit_zayavku">Оставить заявку</button>
+      
                   </div>
-    
-                  <div class="input-div">
-                    <input type="tel" class="input" name="phone" placeholder="Контактный телефон*" required minlength="10">
-                    <span class="error-message">Заполните это поле</span>
-                  </div>
-    
-                  <button class="button ajax-submit" type="submit" id="ostavit_zayavku">Оставить заявку</button>
-    
-                </div>
-                <div class="form__info">*Ваши данные в безопасности и не будут переданы третьим лицам</div>
-              </form>
+                  <div class="form__info">*Ваши данные в безопасности и не будут переданы третьим лицам</div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section s-travel inverse" id="travel">
-      <div class="container">
-        <h2 class="section-title">Путешествовать с "Tian Shan Tour" выгодно и безопасно</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="travel">
-              <div class="travel__title travel__title--vygod">Выгоды</div>
-              <ul>
-                <li>У нас Вы можете оформить тур в <span>рассрочку
-                    и в кредит</span></li>
-                <li>При оформлении тура стоимостью более 
-                    300 000 тг. Вы получаете <span>накопительную карту.</span> 
-                    1% от стоимости тура Вы можете использовать
-                    в качестве <span>бонуса</span> к следующей Вашей поездке</li>
-                <li>При покупке тура стоимостью более 1 млн. тг. -
-                    -  <span>скидка 2%</span>    </li>
-              </ul>
+      </section>
+  
+      <section class="section s-travel inverse" id="travel">
+        <div class="container">
+          <h2 class="section-title">Путешествовать с "Tian Shan Tour" выгодно и безопасно</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="travel">
+                <div class="travel__title travel__title--vygod">Выгоды</div>
+                <ul>
+                  <li>У нас Вы можете оформить тур в <span>рассрочку
+                      и в кредит</span></li>
+                  <li>При оформлении тура стоимостью более 
+                      300 000 тг. Вы получаете <span>накопительную карту.</span> 
+                      1% от стоимости тура Вы можете использовать
+                      в качестве <span>бонуса</span> к следующей Вашей поездке</li>
+                  <li>При покупке тура стоимостью более 1 млн. тг. -
+                      -  <span>скидка 2%</span>    </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="travel">
-              <div class="travel__title travel__title--garant">Гарантии</div>
-              <ul>
-                <li>Обязательно выдаем туркод, который
-                    гарантирует Вашу <span>безопасность и спокойный
-                    возврат на родину</span></li>
-                <li>Обеспечиваем <span>медицинским страхованием</span></li>
-              </ul>
+            <div class="col-md-6">
+              <div class="travel">
+                <div class="travel__title travel__title--garant">Гарантии</div>
+                <ul>
+                  <li>Обязательно выдаем туркод, который
+                      гарантирует Вашу <span>безопасность и спокойный
+                      возврат на родину</span></li>
+                  <li>Обеспечиваем <span>медицинским страхованием</span></li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </div>        
-      </div>
-    </section>
+          </div>        
+        </div>
+      </section>
+  
+    </div>
 
     <section class="section s-hotel" id="hotel">
       <div class="container">
