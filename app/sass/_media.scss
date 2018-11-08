@@ -394,12 +394,11 @@
 
   #jivo-iframe-container {
     display: none !important;
-    // visibility: hidden !;
   }
 
-  // .call-me {
-  //   display: flex;
-  // }
+  jdiv {
+    display: none !important;
+  }
 
   .callback__wrapper {
     display: block !important; 
