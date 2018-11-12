@@ -18,6 +18,7 @@ gulp.task('main-js', function () {
   return gulp.src([
     'app/js/main.js',
     'app/js/animation1.js',
+    'app/js/animation2.js',
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify()) // Минифицирует js
@@ -62,7 +63,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', ['sass', 'libs-js', 'main-js', 'browser-sync'], function () {
   gulp.watch('app/sass/**/*.+(sass|scss)', ['sass']);
-  gulp.watch('app/js/main.js', ['main-js']);
+  gulp.watch(['app/js/main.js', 'app/js/animation1.js', 'app/js/animation2.js'], ['main-js']);
   gulp.watch(['app/*.html'], browserSync.reload);
 });
 
