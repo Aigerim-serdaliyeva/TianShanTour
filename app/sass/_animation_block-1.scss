@@ -1,18 +1,29 @@
 .animation1 {
   position: relative;
   z-index: 0;
+  overflow: hidden;
 
-  .canvas {
+  canvas {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: red;
-    z-index: -1;
+    z-index: 1;
   }
 
   .section {
-    position: static !important;
+    & > .container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .animation1 {
+    canvas {
+      display: none;
+    }
   }
 }
